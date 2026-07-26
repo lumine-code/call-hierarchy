@@ -37,11 +37,9 @@ describe("call-hierarchy package assets", () => {
     expect(pkg.devDependencies.prettier).toBeDefined();
   });
 
-  it("consumes the lumine.languageServer service and provides none", () => {
+  it("consumes the ide-client service and provides none", () => {
     const pkg = JSON.parse(read("package.json"));
-    expect(pkg.consumedServices["lumine.languageServer"].versions["^1.0.0"]).toBe(
-      "consumeLanguageServer",
-    );
+    expect(pkg.consumedServices["ide-client"].versions["^1.0.0"]).toBe("consumeIdeClient");
     expect(pkg.providedServices).toBeUndefined();
   });
 

@@ -78,7 +78,7 @@ describe("call-hierarchy", () => {
     mainModule = pack.mainModule;
     editor = await atom.workspace.open(originPath);
 
-    // A stub of the `lumine.languageServer` service: one prepared item at the
+    // A stub of the `ide-client` service: one prepared item at the
     // cursor, two incoming callers in another file, and no outgoing calls.
     session = {
       state: "running",
@@ -108,7 +108,7 @@ describe("call-hierarchy", () => {
         return null;
       }),
     };
-    serviceDisposable = mainModule.consumeLanguageServer(service);
+    serviceDisposable = mainModule.consumeIdeClient(service);
   });
 
   afterEach(async () => {
