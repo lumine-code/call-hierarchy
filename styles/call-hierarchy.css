@@ -1,0 +1,91 @@
+.call-hierarchy {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size);
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--tree-view-background-color);
+  contain: size;
+  overflow: hidden;
+  user-select: none;
+}
+
+.call-hierarchy-header {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--panel-heading-border-color);
+  background-color: var(--panel-heading-background-color);
+}
+
+.call-hierarchy-direction {
+  color: var(--text-color-highlight);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.call-hierarchy-list {
+  flex: 1;
+  overflow: auto;
+  padding: 0 10px 0 5px;
+}
+
+.call-hierarchy .icon::before {
+  font-size: var(--font-size);
+}
+
+.call-hierarchy ul.call-hierarchy-tree {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.call-hierarchy ul.call-hierarchy-tree-root {
+  position: relative;
+  min-width: min-content;
+}
+
+.call-hierarchy ul.call-hierarchy-tree ul.call-hierarchy-tree {
+  padding-left: 17px;
+}
+
+.call-hierarchy .call-hierarchy-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.call-hierarchy li.call-hierarchy-entry.selected > .call-hierarchy-item {
+  background-color: var(--background-color-selected);
+}
+
+.call-hierarchy .call-hierarchy-name::before {
+  flex: none;
+  position: relative;
+  top: -1px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.call-hierarchy .call-hierarchy-count {
+  flex: none;
+  margin-left: 6px;
+}
+
+.call-hierarchy .call-hierarchy-detail {
+  margin-left: 6px;
+  color: var(--text-color-subtle);
+  font-size: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.call-hierarchy ul.background-message {
+  padding-top: 50px;
+  text-align: center;
+  list-style-type: none;
+}
