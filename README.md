@@ -43,7 +43,7 @@ The call hierarchy appearance can be tweaked from your `styles.less`:
 
 ## Services
 
-- **[ide-client](https://lumine-code.github.io/docs.html#services/ide-client)** (`^1.0.0`): consumed to route the `textDocument/prepareCallHierarchy`, `callHierarchy/incomingCalls`, and `callHierarchy/outgoingCalls` requests through the origin editor's language-server session.
+- **ide-client** (`^1.0.0`): consumed to route the `textDocument/prepareCallHierarchy`, `callHierarchy/incomingCalls`, and `callHierarchy/outgoingCalls` requests through the origin editor's language-server session.
 
 ## Contributing
 
