@@ -75,7 +75,7 @@ describe("call-hierarchy package assets", () => {
 
   it("has no legacy editor branding in lib, README, or package.json", () => {
     // Technical identifiers such as the `atom` global, `atom-text-editor`
-    // selectors, and `atom://` URIs are allowed; editor branding is not.
+    // selectors, and `lumine://` URIs are allowed; editor branding is not.
     const branding = /\bAtom\b|\bPulsar\b/;
     for (const file of fs.readdirSync(path.join(root, "lib"))) {
       if (!file.endsWith(".js")) continue;
