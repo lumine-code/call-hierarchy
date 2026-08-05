@@ -17,7 +17,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.100.0 <2.0.0"
+    "lumine": ">=1.100.0 <2.0.0"
   },
   "backgroundTips": [
     "{% if keys['call-hierarchy:incoming-calls'] %}You can list the callers of the symbol under the cursor with {{ 'call-hierarchy:incoming-calls' | keystroke }}{% else %}You can walk the callers and the callees of a symbol as a tree in the call hierarchy panel.{% endif %}"
