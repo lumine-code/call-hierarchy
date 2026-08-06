@@ -30,9 +30,9 @@ Commands available in `atom-text-editor`:
 
 ## Customization
 
-The call hierarchy appearance can be tweaked from your `styles.less`:
+The call hierarchy appearance can be tweaked from your `styles.css`:
 
-```less
+```css
 .call-hierarchy {
   font-size: 12px;
   .call-hierarchy-detail {
