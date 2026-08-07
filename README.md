@@ -21,7 +21,8 @@ To install `call-hierarchy` search for _call-hierarchy_ in the Install pane of t
 
 Commands available in `atom-workspace`:
 
-- `call-hierarchy:toggle`: toggle the call hierarchy dock item.
+- `call-hierarchy:toggle`: show or hide the call hierarchy dock item,
+- `call-hierarchy:toggle-focus`: focus the call hierarchy, or return focus to the editor.
 
 Commands available in `atom-text-editor`:
 

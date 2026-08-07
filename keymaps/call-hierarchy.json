@@ -1,0 +1,8 @@
+{
+  // `alt-c` reveals the panel and hands focus back on a second press. Bare
+  // alt-<letter> is the tier for revealing a surface, one letter per surface,
+  // keyed to the package's own initial.
+  "atom-workspace": {
+    "alt-c": "call-hierarchy:toggle-focus"
+  }
+}

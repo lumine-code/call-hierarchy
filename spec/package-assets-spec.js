@@ -9,8 +9,12 @@ const exists = (rel) => fs.existsSync(path.join(root, rel));
 // the command prefix and config namespace, the CSS-custom-property stylesheet,
 // and the absence of legacy editor branding.
 describe("call-hierarchy package assets", () => {
-  it("ships no keymaps or menus", () => {
-    expect(exists("keymaps")).toBe(false);
+  it("ships a keymap on the reveal tier, and no menus", () => {
+    // A bare alt-<letter> at workspace scope reveals a surface, one letter per
+    // surface. `keymaps` has to be in `files` or the binding never ships.
+    const keymap = JSON.parse(read("keymaps/call-hierarchy.json").replace(/^\s*\/\/.*$/gm, ""));
+    expect(keymap["atom-workspace"]["alt-c"]).toBe("call-hierarchy:toggle-focus");
+    expect(JSON.parse(read("package.json")).files).toContain("keymaps");
     expect(exists("menus")).toBe(false);
   });
 
