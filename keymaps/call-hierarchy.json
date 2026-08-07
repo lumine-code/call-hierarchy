@@ -1,8 +1,10 @@
 {
-  // `alt-c` reveals the panel and hands focus back on a second press. Bare
-  // alt-<letter> is the tier for revealing a surface, one letter per surface,
-  // keyed to the package's own initial.
+  // `alt-k` rather than the obvious `alt-c` or `alt-h`: alt-c is a chord prefix
+  // inside the fuzzy pickers, where a complete binding of the same keystroke
+  // makes every press sit out the 1000 ms partial-match timeout, and macOS
+  // binds alt-h in the editor as the Cocoa delete-to-beginning-of-word, which
+  // would leave this dead in an editor there.
   "atom-workspace": {
-    "alt-c": "call-hierarchy:toggle-focus"
+    "alt-k": "call-hierarchy:toggle-focus"
   }
 }

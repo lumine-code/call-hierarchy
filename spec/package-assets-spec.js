@@ -13,7 +13,7 @@ describe("call-hierarchy package assets", () => {
     // A bare alt-<letter> at workspace scope reveals a surface, one letter per
     // surface. `keymaps` has to be in `files` or the binding never ships.
     const keymap = JSON.parse(read("keymaps/call-hierarchy.json").replace(/^\s*\/\/.*$/gm, ""));
-    expect(keymap["atom-workspace"]["alt-c"]).toBe("call-hierarchy:toggle-focus");
+    expect(keymap["atom-workspace"]["alt-k"]).toBe("call-hierarchy:toggle-focus");
     expect(JSON.parse(read("package.json")).files).toContain("keymaps");
     expect(exists("menus")).toBe(false);
   });
